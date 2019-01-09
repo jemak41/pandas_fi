@@ -4,8 +4,8 @@ import csv
 import datetime
 import pandas_add
 
-csv_file = 'C://Users//Jemak//Desktop//pandas//expenses.csv'
-source_csv = 'C://Users//Jemak//Desktop//Google_Drive//Untitled 1.csv'
+csv_file = 'expenses.csv'
+source_csv = 'Untitled 1.csv'
 df_exp = pd.read_csv(csv_file, sep=',')
 source = pd.read_csv(source_csv, sep=',')
 added = []
