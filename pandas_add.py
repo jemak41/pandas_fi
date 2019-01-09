@@ -43,27 +43,32 @@ def append(dataf,csv_filename, csv_file, type_list, df_show):
     print('Purchase/Sales Added:')
     df = pd.read_csv(csv_filename, sep=',')
     print(df.tail(50))
-while True:
-    try:
-        print('1. Expenses')
-        print('2. Income')
-        print('0. Quit')
-        adding = int(input('What do you want to add? '))
-        if adding == 1:
-            append(df_exp, 'expenses.csv', 'expenses.csv', type_list_exp, df)
-        elif adding == 2:
-            append(df_inc, 'income.csv', 'income.csv', type_list_inc, df_i)
-        elif adding == 0:
-            exit()
-        else:
-            print('Enter correct number.')
-            continue
-        print('1. Yes')
-        print('2. No')
-        validation = int(input('Do you want to add anything? '))
-        if validation == 2:
-            break
-    except ValueError:
-        print()
-        print('The input is incorrect!')
-        print()
+    
+def main():
+    while True:
+        try:
+            print('1. Expenses')
+            print('2. Income')
+            print('0. Quit')
+            adding = int(input('What do you want to add? '))
+            if adding == 1:
+                append(df_exp, 'expenses.csv', 'expenses.csv', type_list_exp, df)
+            elif adding == 2:
+                append(df_inc, 'income.csv', 'income.csv', type_list_inc, df_i)
+            elif adding == 0:
+                exit()
+            else:
+                print('Enter correct number.')
+                continue
+            print('1. Yes')
+            print('2. No')
+            validation = int(input('Do you want to add anything? '))
+            if validation == 2:
+                break
+        except ValueError:
+            print()
+            print('The input is incorrect!')
+            print()
+            
+if __name__ == '__main__':
+    main()
