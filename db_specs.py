@@ -4,7 +4,7 @@ import time
 from sqlalchemy.sql import text
 
 metadata = MetaData()
-engine = create_engine('sqlite:///C:\\Users\\Jemak\\Desktop\\Pandas\\pandas.db', echo=True)
+engine = create_engine('sqlite:///C:\\Users\\user\\pandas.db', echo=True)
 
 conn = engine.connect()
 
