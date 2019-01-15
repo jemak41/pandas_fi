@@ -5,17 +5,17 @@ from sqlalchemy.sql import text
 from datetime import datetime
 
 metadata = MetaData()
-engine = create_engine('sqlite:///C:\\Users\\Jemak\\Desktop\\Pandas\\pandas.db', echo=True)
+engine = create_engine('sqlite:///C:\\Users\\user\\pandas.db', echo=True)
 conn = engine.connect()
 
 #DEFINE the dataframes
-df_exp = pd.read_csv('C://Users//Jemak//Desktop//pandas//expenses.csv', sep=',')
-df_type = pd.read_csv('C://Users//Jemak//Desktop//pandas//type.csv', sep=',')
+df_exp = pd.read_csv('C://Users//user//expenses.csv', sep=',')
+df_type = pd.read_csv('C://Users//user//type.csv', sep=',')
 
-df_exp_208 = pd.read_csv('C://Users//Jemak//Desktop//pandas//expenses_2018.csv', sep=',')
+df_exp_208 = pd.read_csv('C://Users//user//expenses_2018.csv', sep=',')
 
-df_inc = pd.read_csv('C://Users//Jemak//Desktop//pandas//income.csv', sep=',')
-df_inctype = pd.read_csv('C://Users//Jemak//Desktop//pandas//TypeInc.csv', sep=',')
+df_inc = pd.read_csv('C://Users//user//income.csv', sep=',')
+df_inctype = pd.read_csv('C://Users//user//TypeInc.csv', sep=',')
 
 
 #EDIT dataframes date
