@@ -7,14 +7,14 @@ import csv
 import datetime
 
 metadata = MetaData()
-engine = create_engine('sqlite:///C:\\Users\\Jemak\\Desktop\\Pandas\\pandas.db', echo=True)
+engine = create_engine('sqlite:///C:\\Users\\user\\pandas.db', echo=True)
 conn = engine.connect()
 
-source_csv = 'C://Users//Jemak//Desktop//Google_Drive//Untitled 1.csv'
+source_csv = 'C://Users//user//Google_Drive//Untitled 1.csv'
 source = pd.read_csv(source_csv, sep=',')
 df_exp = pd.read_sql('select * from expenses', con=conn)
 
-source_csv1 = 'C://Users//Jemak//Desktop//Google_Drive//Untitled 1 - Copy.csv'
+source_csv1 = 'C://Users//user//Google_Drive//Untitled 1 - Copy.csv'
 source1 = pd.read_csv(source_csv1, sep=',')
 df_inc = pd.read_sql('select * from income', con=conn)
 
